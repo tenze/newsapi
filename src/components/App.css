@@ -1,0 +1,15 @@
+header {
+  background-color: #393939;
+  padding: 20px;
+}
+
+header h1 {
+  color: #FAFAFA;
+  margin: 0 auto;
+  font-family: sans-serif;
+  text-align: center;
+}
+
+#description-body {
+  padding: 20px;
+}

@@ -1,0 +1,2 @@
+INSERT INTO newslist (newsid,name,description,url) VALUES('engadget','Engadget','Engadget is a web magazine with obsessive daily coverage of everything new in gadgets and consumer electronics.','https://www.engadget.com');
+INSERT INTO newslist (newsid,name,description,url) VALUES('the-verge','The Verge','The Verge covers the intersection of technology, science, art, and culture.','https://www.theverge.com');
