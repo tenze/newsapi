@@ -1,15 +1,18 @@
-header {
-  background-color: #393939;
+*{
+  text-align: center;
+}
+.App-header{
+  background-color: #55575b;
   padding: 20px;
+  width: 100wh;
+  height: 10vh
 }
 
-header h1 {
-  color: #FAFAFA;
+  h1 {
+  color: #4d89f9;
   margin: 0 auto;
   font-family: sans-serif;
   text-align: center;
+  height: 40px;
 }
 
-#description-body {
-  padding: 20px;
-}

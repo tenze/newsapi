@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewsListItem from '../components/NewsListItem/NewsListItem.jsx';
 import NewsList from '../components/NewsList/NewsList.jsx';
+import './normalize.css';
 import './App.css';
 
 class App extends Component {
@@ -9,18 +10,17 @@ class App extends Component {
 
     this.state = {
       newsList: []
+
     }
   }
 
-componentWillMount(){
-  this.getAllNews()
-}
+
   getAllNews() {
     fetch(`/api/news`)
     .then(r => r.json())
-    .then(data => {
+    .then(news => {
         this.setState({
-          newsList : data
+          newsList : news
         });
           console.log (this.state.newsList)
           // this.renderAllNews()
@@ -41,20 +41,25 @@ renderAllNews() {
         )
     })
   }
+componentDidMount(){
+  this.getAllNews()
+}
+
   render() {
     return (
       <div className="App">
         <div className="App-header">
           <h1>Tech Time</h1>
         </div>
-        <NewsListItem />
+        <NewsListItem/>
         <p className="App-intro">
-          contents from api
+          from app.jsx
         </p>
 
       <NewsList
-        getAllNews={this.renderAllNews.bind(this)}
+        getAllNews={this.getAllNews.bind(this)}
         newsList={this.state.newsList}
+
       />
 
       <footer>
