@@ -1,0 +1,12 @@
+/*.share-button {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+*/
+.btn-f {
+  float:right;
+}
+.btn-g {
+  float:right;
+}

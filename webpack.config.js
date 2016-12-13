@@ -9,6 +9,7 @@ const APP_DIR           = path.resolve(__dirname, 'src');
 
 
 module.exports = {
+  context: __dirname,
   entry: `${APP_DIR}/index.js`,
   output: {
     path: BUILD_DIR,
@@ -50,6 +51,10 @@ module.exports = {
         loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
       },
       {
+        test: /\.png$/,
+        loader: 'file-loader?name=/img/[name].[hash:base64:5].[ext]'
+      },
+      {
         test: /\.(js|jsx)$/,
         loader: 'babel'
       },
@@ -57,6 +62,7 @@ module.exports = {
         test: /\.otf(\?v=\d+\.\d+\.\d+)?$/,
         loader: 'file-loader?name=/fonts/[name].[ext]'
       }
+
     ]
   }
 };
