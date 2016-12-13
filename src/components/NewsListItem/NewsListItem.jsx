@@ -8,42 +8,48 @@ import './NewsListItem.css';
 const { FacebookShareButton, GooglePlusShareButton } = ShareButtons;
 const FacebookIcon = generateShareIcon('facebook');
 const GooglePlusIcon = generateShareIcon('google');
-const shareUrl = 'http://github.com';
+const shareUrl = 'github.com';
 const title = 'GitHub';
 
-    const NewsListItem = props => (
-   <div className='news-list-item'>
-    <p>{props.name}</p>
+const NewsListItem = props => (
+  <div className='news-container'>
+
+   <div className='news-name'>
+    <h2>{props.name}</h2>
+    </div>
+
    <div className='news-description'>
     <p>{props.description}</p>
   </div>
+
   <div className='news-url'>
-    <p>{props.url}</p>
+    <p><a href ={props.url}>WebSite</a></p>
   </div>
+
   <div className='news-urllogo'>
     <p>{props.urlsToLogos}</p>
   </div>
-  <div className="social">
-     <FacebookShareButton
-            url={shareUrl}
-            name={title}
+
+  <FacebookShareButton
+            url={props.url}
+            name={name}
             className="btn-f">
             <FacebookIcon
               size={20}
               round />
-      </FacebookShareButton>
+  </FacebookShareButton>
 
-       <GooglePlusShareButton
-            url={shareUrl}
+  <GooglePlusShareButton
+            url={props.url}
             name={props.name}
             className="btn-g">
             <GooglePlusIcon
               size={20}
               round />
-          </GooglePlusShareButton>
-      </div>
-    <button onClick={() => props.handleShare(props.id)}>
-    </button>
+    </GooglePlusShareButton>
+
+    {/* <button onClick={() => props.handleShare(props.id)}>
+     </button>*/}
 
   </div>
   )

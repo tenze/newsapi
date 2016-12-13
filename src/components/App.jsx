@@ -9,8 +9,27 @@ class App extends Component {
     super();
 
     this.state = {
-      newsList: []
+      newsList: {
+        "sources" : [
+          {
+            "id": "ars-technica",
+            "name": "Ars Technica",
+            "description": "The PC enthusiast's resource. Power users and the tools they love, without computing religion.",
+            "url": "http://arstechnica.com",
+            "category": "technology",
+            "language": "en",
+            "country": "us",
+            "urlsToLogos": {
+              "small": "http://i.newsapi.org/ars-technica-s.png",
+              "medium": "http://i.newsapi.org/ars-technica-m.png",
+              "large": "http://i.newsapi.org/ars-technica-l.png"
+            }
+          },
 
+        ]
+      },
+      name: '',
+      urlSelected: ''
     }
   }
 
@@ -41,6 +60,7 @@ renderAllNews() {
         )
     })
   }
+
 componentDidMount(){
   this.getAllNews()
 }
@@ -49,17 +69,13 @@ componentDidMount(){
     return (
       <div className="App">
         <div className="App-header">
-          <h1>Tech Time</h1>
+          <h1>Tech Site</h1>
+          <p><span>Get the latest news on Tech from from these sites</span></p>
         </div>
-        <NewsListItem/>
-        <p className="App-intro">
-          from app.jsx
-        </p>
 
       <NewsList
         getAllNews={this.getAllNews.bind(this)}
         newsList={this.state.newsList}
-
       />
 
       <footer>
