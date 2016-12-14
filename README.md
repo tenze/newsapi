@@ -3,7 +3,7 @@
 This App will show a list of Tech webisite. It will provide a link 
 to respective webiste and a feature to share on Google+ and facebook.
 
-![Alt text](/Users/tenzin/WDI/Native/project4/NewsApi/src/components/Images/AppScreenShot.png?raw=true "Optional Title")
+![App ScreenShot](../Images/AppScreenShot.png?raw=true "Tech Site")
 
                         Technology Used :
 - Node.js : JavaScript server side platform the web application.
