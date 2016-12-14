@@ -40,8 +40,8 @@ class NewsList extends Component {
       <div id='news-list-container'>
         {newsapi}
 
-      {
-      /* <button onClick={this.renderAllNews.bind(this)}>Get All News</button> */}
+
+      {/* <button onClick={this.renderAllNews.bind(this)}>Get All News</button> */ }
 
       </div>
     )

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import NewsListItem from '../components/NewsListItem/NewsListItem.jsx';
 import NewsList from '../components/NewsList/NewsList.jsx';
+import globalStyles from './Assets/Styles/global.css';
 import './normalize.css';
 import './App.css';
 
@@ -20,9 +21,7 @@ class App extends Component {
             "language": "en",
             "country": "us",
             "urlsToLogos": {
-              "small": "http://i.newsapi.org/ars-technica-s.png",
-              "medium": "http://i.newsapi.org/ars-technica-m.png",
-              "large": "http://i.newsapi.org/ars-technica-l.png"
+              "small": "http://i.newsapi.org/ars-technica-s.png"
             }
           },
 
@@ -70,15 +69,18 @@ componentDidMount(){
       <div className="App">
         <div className="App-header">
           <h1>Tech Site</h1>
-          <p><span>Get the latest news on Tech from from these sites</span></p>
+          <p><span>Get the latest news on Tech from these sites</span></p>
         </div>
-
+      <div id='newslist'>
       <NewsList
         getAllNews={this.getAllNews.bind(this)}
         newsList={this.state.newsList}
+        logo={this.state.urlLogo}
       />
+      </div>
 
       <footer>
+        <p> React + node © TC </p>
       </footer>
       </div>
     );

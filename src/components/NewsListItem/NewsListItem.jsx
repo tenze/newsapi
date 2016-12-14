@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
 import { ShareButtons, generateShareIcon } from 'react-share';
 import facebook from '../Images/facebook.png';
-import googlePlus from '../Images/googlePlus.png'
+import googlePlus from '../Images/googlePlus.png';
 
 import './NewsListItem.css';
 
 const { FacebookShareButton, GooglePlusShareButton } = ShareButtons;
 const FacebookIcon = generateShareIcon('facebook');
 const GooglePlusIcon = generateShareIcon('google');
+
+
 const shareUrl = 'github.com';
 const title = 'GitHub';
 
 const NewsListItem = props => (
   <div className='news-container'>
+
+  <div className='news-urllogo'>
+    <img src={props.urlLogo.small} alt={props.urlLogo.small} />
+  </div>
 
    <div className='news-name'>
     <h2>{props.name}</h2>
@@ -23,12 +29,9 @@ const NewsListItem = props => (
   </div>
 
   <div className='news-url'>
-    <p><a href ={props.url}>WebSite</a></p>
+    <p><a href ={props.url}>-- WebSite --</a></p>
   </div>
 
-  <div className='news-urllogo'>
-    <p>{props.urlsToLogos}</p>
-  </div>
 
   <FacebookShareButton
             url={props.url}
@@ -48,10 +51,8 @@ const NewsListItem = props => (
               round />
     </GooglePlusShareButton>
 
-    {/* <button onClick={() => props.handleShare(props.id)}>
-     </button>*/}
-
   </div>
   )
+
 
 export default NewsListItem;
