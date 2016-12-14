@@ -15,10 +15,9 @@ to respective webiste and a feature to share on Google+ and facebook.
   static asset.
 - Heroku : Deploy the web application.  
 
-
-
-### Wireframe
-![Wireframe](https://wireframe.cc/UKME7t)
-
-### User Stories and WireFrame
-![User Stories](https://git.generalassemb.ly/wdi-nyc-60/project-4/issues/46)
+###  WireFrame
+![Wire Frame](./src/components/Images/WireFrame.png?raw=true "Wire Frame")
+### User Stories
+- User will see list Tech website.
+- User will be able to go to the respective website by clicking on WebSite.
+- User will be able to share the Website through either Google+ or facebook
